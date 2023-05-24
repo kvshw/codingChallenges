@@ -1,6 +1,6 @@
 /*
 Fundamentals-Part-2
- Coding Challenge #2
+ 
 
  Steven is still building his tip calculator, using
 the same rules as before: Tip 15% of the bill if the
@@ -23,9 +23,9 @@ total values, so the bill + tip.
 
 TEST DATA: 125, 555 and 44
 */
-
+//============= Coding Challenge #2 ===================//
+/*
 const bills = [125, 555, 44]
-
 
 const calcTip = (bill) => {
   const tipRegular = bill * (15 / 100);
@@ -37,13 +37,51 @@ const calcTip = (bill) => {
     return tipVip
   }
 }
-console.log(calcTip(100))
 
+const total = []
 const tips = [];
 for (let i = 0; i <= bills.length - 1; i++) {
   const tip = (calcTip(bills[i]))
+  let sum = bills[i] + tip
+  total.push(sum)
   tips.push(tip)
 }
 
 console.log(tips)
+console.log(total)
+*/
 
+/*============ Objects =============*/
+
+// Object literal 
+// "Order of these items doesn't matter when retrive them."
+// const jonas = {
+//   firstName:"Jonas",
+//   lastName: "Schmedtmann",
+//   age: 2037 - 1991,
+//   job:"teacher",
+//   friends: ["Micheal","Peter","Steven"]
+// }
+
+// DOT vs Bracket Notation
+
+const jonas = {
+  firstName:"Jonas",
+  lastName: "Schmedtmann",
+  age: 2037 - 1991,
+  job:"teacher",
+  friends: ["Micheal","Peter","Steven"],
+  harryPotter:"Jane"
+}
+// Dot Notation
+console.log(jonas.lastName)
+// Bracket Notation
+console.log(jonas['lastName'])
+
+const nameKey = "Potter";
+console.log(jonas["harry" + nameKey])
+// console.log(jonas["last" + nameKey])
+
+const input = prompt("What do you want to knwo about Jonas? Choose between fistName, lastName, age, job, friends")
+
+console.log(jonas[input])
