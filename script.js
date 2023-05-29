@@ -1,6 +1,6 @@
 /*
 Fundamentals-Part-2
- 
+
 
  Steven is still building his tip calculator, using
 the same rules as before: Tip 15% of the bill if the
@@ -64,7 +64,7 @@ console.log(total)
 // }
 
 // DOT vs Bracket Notation
-
+/*
 const jonas = {
   firstName:"Jonas",
   lastName: "Schmedtmann",
@@ -85,3 +85,53 @@ console.log(jonas["harry" + nameKey])
 const input = prompt("What do you want to knwo about Jonas? Choose between fistName, lastName, age, job, friends")
 
 console.log(jonas[input])
+*/
+
+/*
+Write a JavaScript function to check whether an `input` is an array or not.
+
+const checkArray = (input) => {
+  return Array.isArray(input);
+}
+
+console.log(checkArray("Hello"));
+
+*/
+/*
+Write a JavaScript function to clone an array.
+*/
+/*
+const array = [1,2,3,4]
+//const cloned_array = array.slice()
+//const cloned_array = [...array]
+const cloned_array = Array.from(array)
+
+console.log(cloned_array);
+*/
+/*
+Write a JavaScript function to get the first element of an array. Passing the parameter 'n' will return the first 'n' elements of the array */
+
+// array = [[],3];
+// const firstElement = (arr, n) => {
+//   return arr.slice(0, n)
+// }
+// const element = firstElement(array, 2)
+// console.log(element)
+
+/* Write a JavaScript function to get the last element of an array. Passing the parameter 'n' will return the last 'n' elements of the array.
+console.log(last([7, 9, 0, -2]));
+*/
+
+// const last = (arr,n = 1) => {
+//   if(n <= 0){
+//     return [];
+//   }
+//   else if(n>=arr.length){
+//     return arr.slice();
+//   }
+//   else{
+//     return arr.slice(-n);
+//   }
+// }
+
+// console.log(last([7, 9, 0, -2]))
