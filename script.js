@@ -135,3 +135,81 @@ console.log(last([7, 9, 0, -2]));
 // }
 
 // console.log(last([7, 9, 0, -2]))
+// Write a function to convert a name into initials. This kata strictly takes two words with one space in between them.
+
+// The output should be two capital letters with a dot separating them.
+
+// It should look like this:
+
+// Sam Harris => S.H
+
+// patrick feeney => P.F
+
+
+// function abbrevName(name){
+// //Checks is the name includes a space
+//     if(name.includes(" ")){
+//       //Spliting the name by the space 
+//       const nameArray = name.split(" ");
+//       // Thinking the name only has two parts and got the first and second part using array
+//       let firstNLetter = (nameArray[0][0]).toUpperCase()
+//       let lastNLetter = (nameArray[1][0]).toUpperCase()
+//       //returning first name and last name with the .
+//       return `${firstNLetter}.${lastNLetter}`
+//     }
+//   	else{
+//       return "Failure"
+//     }
+// }
+
+
+// console.log(abbrevName("Sam Harris"))
+
+// const jonas = {
+//   firstName: "Jonas",
+//   lastName: "Schmedtmann",
+//   birthYear: 1996,
+//   job: "teacher",
+//   friends: ["Micheal", "Peter", "Steven"],
+//   hasDriversLicense : true,
+//   calcAge: function(birthYear){
+//   return 2037 - birthYear
+// }
+// }
+
+// console.log(jonas.calcAge(jonas.birthYear))
+// console.log(jonas['calcAge'](1996))
+
+// console.log(`${jonas.firstName} has ${jonas.friends.length} and his best friend is ${jonas.friends[0]}`)
+
+//Usage of this. Keyword
+const jonas = {
+  firstName: "Jonas",
+  lastName: "Schmedtmann",
+  birthYear: 1996,
+  job: "teacher",
+  friends: ["Micheal", "Peter", "Steven"],
+  hasDriversLicense: function(){
+    if(this.age > 18){
+      return "a"
+    } 
+    else{
+      return "no"
+    }
+  },
+  // calcAge: function() {
+  //   return 2037 - this.birthYear
+  // }
+  calcAge: function() {
+    this.age = 2037 - this.birthYear
+    return this.age;
+  },
+  getSummary: function(){
+    return `${this.firstName} is a ${this.calcAge()} years old ${this.job}. He was born in ${this.birthYear} and he has ${this.hasDriversLicense()} driver's license. He has ${this.friends.length} and his best friend is ${this.friends[0]}.`
+  }
+}
+// console.log(jonas.calcAge())
+
+// console.log(jonas.age)
+
+console.log(jonas.getSummary())
