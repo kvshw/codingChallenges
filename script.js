@@ -183,33 +183,160 @@ console.log(last([7, 9, 0, -2]));
 // console.log(`${jonas.firstName} has ${jonas.friends.length} and his best friend is ${jonas.friends[0]}`)
 
 //Usage of this. Keyword
-const jonas = {
-  firstName: "Jonas",
-  lastName: "Schmedtmann",
-  birthYear: 1996,
-  job: "teacher",
-  friends: ["Micheal", "Peter", "Steven"],
-  hasDriversLicense: function(){
-    if(this.age > 18){
-      return "a"
-    } 
-    else{
-      return "no"
-    }
-  },
-  // calcAge: function() {
-  //   return 2037 - this.birthYear
-  // }
-  calcAge: function() {
-    this.age = 2037 - this.birthYear
-    return this.age;
-  },
-  getSummary: function(){
-    return `${this.firstName} is a ${this.calcAge()} years old ${this.job}. He was born in ${this.birthYear} and he has ${this.hasDriversLicense()} driver's license. He has ${this.friends.length} and his best friend is ${this.friends[0]}.`
-  }
+// const jonas = {
+//   firstName: "Jonas",
+//   lastName: "Schmedtmann",
+//   birthYear: 1996,
+//   job: "teacher",
+//   friends: ["Micheal", "Peter", "Steven"],
+//   hasDriversLicense: function(){
+//     if(this.age > 18){
+//       return "a"
+//     } 
+//     else{
+//       return "no"
+//     }
+//   },
+//   // calcAge: function() {
+//   //   return 2037 - this.birthYear
+//   // }
+//   calcAge: function() {
+//     this.age = 2037 - this.birthYear
+//     return this.age;
+//   },
+//   getSummary: function(){
+//     return `${this.firstName} is a ${this.calcAge()} years old ${this.job}. He was born in ${this.birthYear} and he has ${this.hasDriversLicense()} driver's license. He has ${this.friends.length} and his best friend is ${this.friends[0]}.`
+//   }
+// }
+// // console.log(jonas.calcAge())
+
+// // console.log(jonas.age)
+
+// console.log(jonas.getSummary())
+
+// <================End Objects Theory============>
+// // Let's go back to Mark and John comparing their BMIs! This time, let's use objects to implement the calculations! Remember: BMI = mass / height ** 2 = mass / (height * height) (mass in kg and height in meter)
+// // Your tasks:
+// // 1. Foreachofthem,createanobjectwithpropertiesfortheirfullname,mass,and height (Mark Miller and John Smith)
+// // 2. Createa'calcBMI'methodoneachobjecttocalculatetheBMI(thesame method on both objects). Store the BMI value to a property, and also return it from the method
+// // 3. LogtotheconsolewhohasthehigherBMI,togetherwiththefullnameandthe respective BMI. Example: "John's BMI (28.3) is higher than Mark's (23.9)!"
+// // Test data: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m tall.
+  
+// const mark = {
+//   firstName: "Mark",
+//   lastName: "Miller",
+//   mass: 78,
+//   height: 1.69,
+//   calcBMI: function(){
+//     this.BMI = (this.mass/(this.height*this.height))
+//     return this.BMI.toFixed(1)
+//   }
+// };
+// const john = {
+//   firstName: "John",
+//   lastName: "Smith",
+//   mass: 92,
+//   height: 1.95,
+//   calcBMI: function(){
+//     this.BMI = (this.mass/(this.height*this.height))
+//     return this.BMI.toFixed(1)
+//   }
+// }
+
+// // console.log(`Marks's BMI(${mark.calcBMI()}) is higher than John's BMI(${john.calcBMI()})`)
+// console.log(mark.calcBMI(),john.calcBMI())
+// console.log(mark.BMI > john.BMI ? `Marks's BMI(${mark.BMI.toFixed(1)}) is higher than John's BMI(${john.BMI.toFixed(1)})` : `John's BMI(${john.BMI.toFixed(1)}) is higher than Mark's BMI(${mark.BMI.toFixed(1)})`  )
+
+//<============Loops=============>
+
+// for(let rep = 1 ; rep<=10 ; rep++){
+//   console.log(`Lifting weights repetition ${rep} 🏋️‍♀️`)
+// }
+
+//  const jonasArray = [
+//   "Jonas",
+//   "Schmedtmann",
+//   2037 - 1991,
+//   "teacher",
+//   ["Micheal","Peter","Steven"],
+//    true
+// ];
+
+// const types = []
+// for (let index = 0; index <= jonasArray.length-1; index++) {
+//   console.log(jonasArray[index], typeof jonasArray[index])
+
+//   // types[index] = typeof jonasArray[index]
+
+//   types.push(typeof jonasArray[index])
+// }
+
+// console.log(types)
+
+// const years = [1991,2007,1969,2020];
+
+// const ages = [];
+
+// for (i=0; i<years.length; i++){
+//   ages.push(2037 - years[i])
+  
+// }
+// console.log(ages)
+
+// Continue & Break
+
+//  const jonas = [
+//   "Jonas",
+//   "Schmedtmann",
+//   2037 - 1991,
+//   "teacher",
+//   ["Micheal","Peter","Steven"],
+//    true
+// ];
+
+// console.log('----Only Strings----')
+// for(let i = 0 ; i < jonas.length ; i++){
+//   if(typeof jonas[i] !== `string`) continue;
+//   console.log(jonas[i], typeof jonas[i])
+// }
+
+// console.log('----Break with Number----')
+// for(let i = 0 ; i < jonas.length ; i++){
+//   if(typeof jonas[i] === `number`) break;
+//   console.log(jonas[i], typeof jonas[i])
+// }
+
+//  const jonas = [
+//   "Jonas",
+//   "Schmedtmann",
+//   2037 - 1991,
+//   "teacher",
+//   ["Micheal","Peter","Steven"],
+// ];
+
+// for(i=jonas.length-1 ; i>=0 ; i--){
+//   console.log(i, jonas[i])
+// }
+
+// for(let exercise=1 ; exercise<=3 ; exercise++){
+//   console.log(`----Starting Exercise ${exercise}
+//   `)
+//   for(let rep =1 ; rep<6 ; rep++){
+//     console.log(`----Lifting Weight Repetition ${rep}
+//     `)
+//   }
+// }
+
+let rep = 1;
+
+while (rep<= 10) {
+  console.log(`----Lifting Weight Repetition ${rep}`);
+  rep++
 }
-// console.log(jonas.calcAge())
 
-// console.log(jonas.age)
+let dice = Math.trunc(Math.random()*6) *1
+console.log(dice)
 
-console.log(jonas.getSummary())
+while(dice !== 6){
+  console.log(dice)
+}
